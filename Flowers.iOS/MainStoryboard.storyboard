@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="817">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733.0"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="816">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="817" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="820">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="819" kind="relationship" relationship="rootViewController" id="818"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="821" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="139"/>
+        </scene>
+        <scene sceneID="822">
+            <objects>
+                <viewController id="819" sceneMemberID="viewController" customClass="MainViewController" storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Flowers">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="814"/>
+                        <viewControllerLayoutGuide type="bottom" id="815"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="824">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Last Loaded: Never" lineBreakMode="tailTruncation" minimumFontSize="10" id="829" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="15" y="69" width="290" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="833" firstItem="829" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="834" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="835" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="835" id="836">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="837" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="837" id="838">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="839" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="839" id="840">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="830" firstItem="829" firstAttribute="top" secondItem="814" secondAttribute="bottom" constant="5"/>
+                            <constraint id="831" firstItem="829" firstAttribute="leading" secondItem="824" secondAttribute="leading" constant="15"/>
+                            <constraint id="832" firstItem="824" firstAttribute="trailing" secondItem="829" secondAttribute="trailing" constant="15"/>
+                            <constraint id="841" firstItem="834" firstAttribute="top" secondItem="829" secondAttribute="bottom" constant="10"/>
+                            <constraint id="842" firstItem="834" firstAttribute="leading" secondItem="824" secondAttribute="leading"/>
+                            <constraint id="843" firstItem="824" firstAttribute="trailing" secondItem="834" secondAttribute="trailing"/>
+                            <constraint id="844" firstItem="815" firstAttribute="top" secondItem="834" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flowers" id="823">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="828"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="RefreshButton" destination="828" id="name-outlet-828"/>
+                        <outlet property="FlowersTableView" destination="834" id="name-outlet-834"/>
+                        <outlet property="LastLoadedText" destination="829" id="name-outlet-829"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="825" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="508" y="139"/>
+        </scene>
+        <scene sceneID="851">
+            <objects>
+                <viewController id="852" sceneMemberID="viewController" customClass="DetailsViewController" storyboardIdentifier="DetailsPage" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="849"/>
+                        <viewControllerLayoutGuide type="bottom" id="850"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="853">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="856" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="30" width="120" height="120"/>
+                                <constraints>
+                                    <constraint id="857" firstItem="856" firstAttribute="height" constant="120"/>
+                                    <constraint id="858" firstItem="856" firstAttribute="width" constant="120"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flower name wrapping on a few lines" lineBreakMode="tailTruncation" minimumFontSize="10" id="861" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="140" y="30" width="170" height="86"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="870" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="140" y="121" width="170" height="30"/>
+                                <state key="normal" title="See Comments">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="874" firstItem="870" firstAttribute="height" constant="30"/>
+                                </constraints>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="876" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="160" width="310" height="408"/>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="859" firstItem="856" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="10"/>
+                            <constraint id="860" firstItem="856" firstAttribute="top" secondItem="849" secondAttribute="bottom" constant="10"/>
+                            <constraint id="862" firstItem="861" firstAttribute="top" secondItem="849" secondAttribute="bottom" constant="10"/>
+                            <constraint id="863" firstItem="861" firstAttribute="leading" secondItem="856" secondAttribute="trailing" constant="10"/>
+                            <constraint id="864" firstItem="853" firstAttribute="trailing" secondItem="861" secondAttribute="trailing" constant="10"/>
+                            <constraint id="871" firstItem="870" firstAttribute="leading" secondItem="856" secondAttribute="trailing" constant="10"/>
+                            <constraint id="872" firstItem="870" firstAttribute="top" secondItem="861" secondAttribute="bottom" constant="5"/>
+                            <constraint id="873" firstItem="853" firstAttribute="trailing" secondItem="870" secondAttribute="trailing" constant="10"/>
+                            <constraint id="877" firstItem="876" firstAttribute="top" secondItem="856" secondAttribute="bottom" constant="10"/>
+                            <constraint id="878" firstItem="876" firstAttribute="leading" secondItem="853" secondAttribute="leading" constant="10"/>
+                            <constraint id="879" firstItem="850" firstAttribute="top" secondItem="876" secondAttribute="bottom"/>
+                            <constraint id="880" firstItem="853" firstAttribute="trailing" secondItem="876" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SeeCommentsButton" destination="870" id="name-outlet-870"/>
+                        <outlet property="Scroll" destination="876" id="name-outlet-876"/>
+                        <outlet property="FlowerImage" destination="856" id="name-outlet-856"/>
+                        <outlet property="NameText" destination="861" id="name-outlet-861"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="854" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="141"/>
+        </scene>
+        <scene sceneID="888">
+            <objects>
+                <viewController id="889" sceneMemberID="viewController" customClass="SeeCommentsViewController" storyboardIdentifier="SeeCommentsPage" useStoryboardIdentifierAsRestorationIdentifier="YES" title="See Comments">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="886"/>
+                        <viewControllerLayoutGuide type="bottom" id="887"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="890">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="893" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="30" width="320" height="538"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="894" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="894" id="895">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="896" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="896" id="897">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="898" rowHeight="44">
+                                        <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="898" id="899">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="900" firstItem="893" firstAttribute="top" secondItem="886" secondAttribute="bottom" constant="10"/>
+                            <constraint id="901" firstItem="887" firstAttribute="top" secondItem="893" secondAttribute="bottom"/>
+                            <constraint id="902" firstItem="890" firstAttribute="trailing" secondItem="893" secondAttribute="trailing"/>
+                            <constraint id="903" firstItem="893" firstAttribute="leading" secondItem="890" secondAttribute="leading"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CommentsTableView" destination="893" id="name-outlet-893"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="891" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="143"/>
+        </scene>
+        <scene sceneID="906">
+            <objects>
+                <viewController id="907" sceneMemberID="viewController" customClass="AddCommentViewController" storyboardIdentifier="AddCommentPage" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="904"/>
+                        <viewControllerLayoutGuide type="bottom" id="905"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="908">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter your Comment" lineBreakMode="tailTruncation" minimumFontSize="10" id="911" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="30" width="300" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="915" firstItem="911" firstAttribute="height" constant="21"/>
+                                </constraints>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="916" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="61" width="300" height="277"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="912" firstItem="911" firstAttribute="top" secondItem="904" secondAttribute="bottom" constant="10"/>
+                            <constraint id="913" firstItem="911" firstAttribute="leading" secondItem="908" secondAttribute="leading" constant="10"/>
+                            <constraint id="914" firstItem="908" firstAttribute="trailing" secondItem="911" secondAttribute="trailing" constant="10"/>
+                            <constraint id="917" firstItem="916" firstAttribute="top" secondItem="911" secondAttribute="bottom" constant="10"/>
+                            <constraint id="918" firstItem="916" firstAttribute="leading" secondItem="908" secondAttribute="leading" constant="10"/>
+                            <constraint id="919" firstItem="908" firstAttribute="trailing" secondItem="916" secondAttribute="trailing" constant="10"/>
+                            <constraint id="920" firstItem="905" firstAttribute="top" secondItem="916" secondAttribute="bottom" constant="230"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CommentText" destination="916" id="name-outlet-916"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="909" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="776"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="flower_256_magenta.png" width="256" height="256"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+    </resources>
+</document>

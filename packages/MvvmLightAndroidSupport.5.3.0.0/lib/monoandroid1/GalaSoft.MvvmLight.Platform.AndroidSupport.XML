@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GalaSoft.MvvmLight.Platform.AndroidSupport</name>
+    </assembly>
+    <members>
+        <member name="T:GalaSoft.MvvmLight.Helpers.CachingViewHolder">
+            <summary>
+            An extension of <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/> optimized for usage with the
+            <see cref="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2"/>. Provides additional features
+            that can be used with the MVVM Light data binding system.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.CachingViewHolder.ClickCallback">
+            <summary>
+            A callback that will be executed when the corresponding item is clicked or tapped 
+            by the user.
+            </summary>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes an instance of this class. In most cases this method
+            is not used by the developer.
+            </summary>
+            <param name="javaReference"></param>
+            <param name="transfer"></param>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.#ctor(Android.Views.View)">
+            <summary>
+            Initializes an instance of this class.
+            </summary>
+            <param name="itemView">The view that this holder is attached to.</param>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.DeleteBinding(System.Object)">
+            <summary>
+            Detaches and removes a binding from this holder.
+            Use this method (in case a view is getting recycled) to clean up
+            existing bindings before attaching new ones. The binding that needs
+            to be detached must have been added to the holder using the <see cref="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.SaveBinding(System.Object,GalaSoft.MvvmLight.Helpers.Binding)"/> method.
+            </summary>
+            <param name="key">The key corresponding to the binding to detach and delete. This is the
+            same key that was used in the <see cref="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.SaveBinding(System.Object,GalaSoft.MvvmLight.Helpers.Binding)"/> method.</param>
+            <returns>The binding that has been detached and deleted, in case further processing
+            is necessary/</returns>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.FindCachedViewById``1(System.Int32)">
+            <summary>
+            Explores the attached view and returns the UI element corresponding
+            to the viewId. If no element is found with this ID, the method returns null.
+            </summary>
+            <typeparam name="TView">The type of the view to be returned.</typeparam>
+            <param name="viewId">The ID of the subview that needs to be retrieved.</param>
+            <returns>The sub view corresponding to the viewId, or null if no corresponding sub view is found.</returns>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.SaveBinding(System.Object,GalaSoft.MvvmLight.Helpers.Binding)">
+            <summary>
+            Saves a binding between a element of the view and an element of the data item
+            represented by the view.
+            If the view is getting recycled, the binding should be deleted using the 
+            <see cref="M:GalaSoft.MvvmLight.Helpers.CachingViewHolder.DeleteBinding(System.Object)"/> method.
+            </summary>
+            <param name="key">The key used to retriev the binding later. Typically
+            the key is the view to which the binding is attached (if there is only
+            one binding for this view).</param>
+            <param name="binding">The binding to be saved.</param>
+        </member>
+        <member name="T:GalaSoft.MvvmLight.Helpers.ExtensionsAndroid2">
+            <summary>
+            Defines extension methods for Android only.
+            </summary>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ExtensionsAndroid2.GetRecyclerAdapter``2(System.Collections.Generic.IList{``0},System.Action{``1,``0,System.Int32},System.Func{Android.Views.ViewGroup,System.Int32,``1},System.Action{System.Int32,Android.Views.View,System.Int32,Android.Views.View})">
+            <summary>
+            Creates a new <see cref="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2"/> for a given <see cref="T:System.Collections.Generic.IList`1"/>.
+            </summary>
+            <typeparam name="TItem">The type of the items contained in the <see cref="T:System.Collections.Generic.IList`1"/>.</typeparam>
+            <typeparam name="THolder">The type of the <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/> used in the RecyclerView.
+            For better results and simpler implementation, you can use a <see cref="T:GalaSoft.MvvmLight.Helpers.CachingViewHolder"/> or
+            provide your own implementation.</typeparam>
+            <param name="list">The list that the adapter will be created for.</param>
+            <param name="bindViewHolderDelegate">A delegate to the method used to bind the view to the corresponding item.</param>
+            <param name="createViewHolderDelegate">A delegate to the method used to create the view for the corresponding item.</param>
+            <param name="clickCallback">An optional delegate to a method called when an item is clicked or tapped.</param>
+            <returns>The created <see cref="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2"/>.</returns>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ExtensionsAndroid2.GetRecyclerAdapter``1(System.Collections.Generic.IList{``0},System.Action{GalaSoft.MvvmLight.Helpers.CachingViewHolder,``0,System.Int32},System.Int32,System.Action{System.Int32,Android.Views.View,System.Int32,Android.Views.View})">
+            <summary>
+            Creates a new <see cref="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2"/> for a given <see cref="T:System.Collections.Generic.IList`1"/>.
+            </summary>
+            <typeparam name="TItem">The type of the items contained in the <see cref="T:System.Collections.Generic.IList`1"/>.</typeparam>
+            <param name="list">The list that the adapter will be created for.</param>
+            <param name="bindViewHolderDelegate">A delegate to the method used to bind the view to the corresponding item.</param>
+            <param name="cellLayoutId">The resource ID of the AXML file used to create the cell.</param>
+            <param name="clickCallback">An optional delegate to a method called when an item is clicked or tapped.</param>
+            <returns>The created <see cref="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2"/>.</returns>
+        </member>
+        <member name="T:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2">
+            <summary>
+            A <see cref="T:Android.Support.V7.Widget.RecyclerView.Adapter"/> that automatically updates the associated <see cref="T:Android.Support.V7.Widget.RecyclerView"/> when its 
+            data source changes. Note that the changes are only observed if the data source 
+            implements <see cref="T:System.Collections.Specialized.INotifyCollectionChanged"/>.
+            </summary>
+            <typeparam name="TItem">The type of the items in the data source.</typeparam>
+            <typeparam name="THolder">The type of the <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/> used in the RecyclerView.
+            For better results and simpler implementation, you can use a <see cref="T:GalaSoft.MvvmLight.Helpers.CachingViewHolder"/> or
+            provide your own implementation.</typeparam>
+        </member>
+        <member name="F:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.SelectedItemPropertyName">
+            <summary>
+            The <see cref="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.SelectedItem" /> property's name.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.BindViewHolderDelegate">
+            <summary>
+            A delegate to a method taking a <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/>
+            and setting its View's properties according to the item
+            passed as second parameter.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.CellLayoutId">
+            <summary>
+            The Resource ID of the AXML file we should use to create
+            cells for the RecyclerView. Alternatively you can use the
+            <see cref="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.CreateViewHolderDelegate"/> property.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.ClickCallback">
+            <summary>
+            A delegate to a callback that will be called when an item
+            in the list is clicked (or tapped) by the user. This can be used
+            to perform UI operations such as changing the background color, etc.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.CreateViewHolderDelegate">
+            <summary>
+            A delegate to a method taking an item's position and 
+            a <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/> and creating and returning
+            a cell for the RecyclerView. Alternatively you can use the
+            <see cref="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.CellLayoutId"/> property.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.DataSource">
+            <summary>
+            The data source of this list adapter.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.ItemCount">
+            <summary>
+            Gets the number of items in the data source.
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.SelectedItem">
+            <summary>
+            Gets the RecyclerView's selected item. You can use one-way databinding on this property.
+            </summary>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.GetItem(System.Int32)">
+            <summary>
+            Gets an item corresponding to a given row position.
+            </summary>
+            <param name="row">The row position of the item.</param>
+            <returns>An item corresponding to a given row position.</returns>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.OnBindViewHolder(Android.Support.V7.Widget.RecyclerView.ViewHolder,System.Int32)">
+            <summary>
+            Called when the View should be bound to the represented Item.
+            </summary>
+            <param name="holder">The <see cref="T:Android.Support.V7.Widget.RecyclerView.ViewHolder"/> for this item.</param>
+            <param name="position">The position of the item in the data source.</param>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.OnCreateViewHolder(Android.Views.ViewGroup,System.Int32)">
+            <summary>
+            Called when the View should be created.
+            </summary>
+            <param name="parent">The parent for the view.</param>
+            <param name="viewType">The resource ID (unused).</param>
+            <returns></returns>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.OnItemClick(System.Int32,Android.Views.View)">
+            <summary>
+            Called when an item is clicked (or tapped) in the list.
+            </summary>
+            <param name="newPosition">The position of the clicked item.</param>
+            <param name="newView">The view representing the clicked item.</param>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName">The name of the property that changed.</param>
+        </member>
+        <member name="E:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.PropertyChanged">
+            <summary>
+            Occurs when a property of this instance changes.
+            </summary>
+        </member>
+        <member name="E:GalaSoft.MvvmLight.Helpers.ObservableRecyclerAdapter`2.SelectionChanged">
+            <summary>
+            Occurs when a new item gets selected in the UICollectionView.
+            </summary>
+        </member>
+    </members>
+</doc>

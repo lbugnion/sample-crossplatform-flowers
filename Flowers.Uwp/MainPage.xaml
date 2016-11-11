@@ -1,0 +1,65 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:ignore="http://www.galasoft.ch/ignore"
+      x:Class="Flowers.MainPage"
+      mc:Ignorable="d ignore">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+
+            <AppBarButton Icon="Refresh"
+                          Label="Refresh"
+                          AutomationProperties.HelpText="Refresh"
+                          Command="{Binding RefreshCommand, Mode=OneWay}" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Page.DataContext>
+        <Binding Mode="OneWay"
+                 Path="Main"
+                 Source="{StaticResource Locator}" />
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <RelativePanel Margin="12">
+            <TextBlock x:Name="AppTitle"
+                       Text="{StaticResource ApplicationName}"
+                       Style="{StaticResource ApplicationNameTextStyle}" />
+
+            <TextBlock x:Name="PageTitle"
+                       Text="All Flowers"
+                       RelativePanel.Below="AppTitle"
+                       Style="{StaticResource PageTitleTextStyle}" />
+
+            <Image Source="Assets/Icon.png"
+                   RelativePanel.AlignTopWithPanel="True"
+                   RelativePanel.AlignRightWithPanel="True"
+                   Style="{StaticResource ApplicationIconStyle}" />
+
+            <TextBlock Text="{Binding LastLoadedFormatted, Mode=OneWay}"
+                       RelativePanel.Below="PageTitle"
+                       Style="{StaticResource LastLoadedTextStyle}" />
+        </RelativePanel>
+
+        <ListView x:Name="FlowersList"
+                  ItemTemplate="{StaticResource FlowerViewModelTemplate}"
+                  ItemsSource="{Binding Flowers}"
+                  Grid.Row="1">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="SelectionChanged">
+                    <core:InvokeCommandAction Command="{Binding ShowDetailsCommand, Mode=OneWay}"
+                                              CommandParameter="{Binding SelectedItem, ElementName=FlowersList}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,66 @@
+﻿<helpers:BaseSecondaryView x:Class="Flowers.DetailsPage"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:vm="using:Flowers.ViewModel"
+                           xmlns:helpers="using:Flowers.Helpers"
+                           xmlns:ignore="http://www.galasoft.ch/ignore"
+                           mc:Ignorable="d ignore"
+                           d:DataContext="{d:DesignInstance Type=vm:FlowerViewModel, IsDesignTimeCreatable=True}">
+
+    <helpers:BaseSecondaryView.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add"
+                          Label="comment"
+                          Command="{Binding AddCommentCommand, Mode=OneWay}" />
+        </CommandBar>
+    </helpers:BaseSecondaryView.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Style="{StaticResource PageTitlePanelStyle}">
+            <TextBlock Text="{StaticResource ApplicationName}"
+                       Style="{StaticResource ApplicationNameTextStyle}" />
+
+            <TextBlock Text="{Binding Model.Name}"
+                       Style="{StaticResource PageTitleTextStyle}" />
+
+            <Rectangle Style="{StaticResource PageTitleSeparatorStyle}" />
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.7*" />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Margin="12,0">
+                    <TextBlock Text="{Binding Model.Description}"
+                               Style="{StaticResource DescriptionTextStyle}" />
+
+                    <Rectangle Style="{StaticResource DescriptionSeparatorStyle}" />
+
+                    <ItemsControl ItemsSource="{Binding Model.Comments}"
+                                  ItemTemplate="{StaticResource CommentDataTemplate}" />
+                </StackPanel>
+            </ScrollViewer>
+
+            <Image Source="{Binding ImageUri, Mode=OneWay}"
+                   Style="{StaticResource FlowerImageStyle}" />
+
+            <ToggleButton Content="Button"
+                          Checked="ExpandImageButtonChecked"
+                          Unchecked="ExpandImageButtonUnchecked"
+                          Style="{StaticResource ExpandImageButtonStyle}" />
+
+        </Grid>
+    </Grid>
+</helpers:BaseSecondaryView>
+
