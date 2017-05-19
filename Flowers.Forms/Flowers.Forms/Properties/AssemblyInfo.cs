@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Flowers.Forms")]
-[assembly: AssemblyDescription("Flowers MVVM Light sample (Forms Portable)")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Laurent Bugnion (GalaSoft)")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Flowers.Forms")]
-[assembly: AssemblyCopyright("Copyright © 2014-2015")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]

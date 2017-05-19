@@ -10,7 +10,6 @@
             <Style x:Key="MainPageTitleStyle"
                    TargetType="Label">
 
-                <!--Cannot set the FontSize in Style, known bug in Forms V1.3-->
                 <Setter Property="HorizontalOptions"
                         Value="Center" />
 
@@ -20,7 +19,6 @@
                    TargetType="Label"
                    BasedOn="{StaticResource MainPageTitleStyle}">
 
-                <!--Cannot set the FontSize in Style, known bug in Forms V1.3-->
                 <Setter Property="TextColor"
                         Value="#FFFA28D4" />
 

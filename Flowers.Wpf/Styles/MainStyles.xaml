@@ -27,8 +27,7 @@
                 <TextBlock TextWrapping="Wrap"
                            Text="{Binding Model.Name}"
                            FontSize="24"
-                           TextTrimming="CharacterEllipsis"
-                           Foreground="#FF3AA600" />
+                           TextTrimming="CharacterEllipsis" />
 
                 <TextBlock TextWrapping="Wrap"
                            Text="{Binding Model.Description}"

@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Left"
-                   Margin="10,10,0,-0.001"
+                   Margin="10,10,0,0"
                    TextWrapping="Wrap"
                    Text="All Flowers"
                    VerticalAlignment="Top"

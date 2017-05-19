@@ -6,7 +6,7 @@ Cross platform example with
 - Xamarin.Forms
 - Windows 10 Universal
 - Windows Presentation Foundation
-- Window Phone SIlverlight 8.1
+- Window Phone Silverlight 8.1 (Only supported in Visual Studio 2015 and below!!)
 
 This demonstrates a master-detail application with the following features:
 

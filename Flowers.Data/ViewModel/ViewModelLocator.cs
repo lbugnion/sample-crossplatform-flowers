@@ -11,7 +11,7 @@ namespace Flowers.ViewModel
 {
     public class ViewModelLocator
     {
-        private const bool ForceDesignData = true;
+        private const bool ForceDesignData = false;
         public const string AddCommentPageKey = "AddCommentPage";
         public const string DetailsPageKey = "DetailsPage";
 
