@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Flowers.Uwp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Flowers MVVM Light sample (Universal Windows Platform)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Laurent Bugnion (GalaSoft)")]
 [assembly: AssemblyProduct("Flowers.Uwp")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright © Laurent Bugnion (GalaSoft) 2014-2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

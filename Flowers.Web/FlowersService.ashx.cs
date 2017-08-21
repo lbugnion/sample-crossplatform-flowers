@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
-using Flowers.Data.Model;
 using Flowers.Helpers;
 using Flowers.Model;
 using Newtonsoft.Json;
@@ -68,7 +67,6 @@ namespace Flowers
                         return;
                     }
                 }
-                break;
 
                 case WebConstants.ActionSave:
                 {
@@ -102,7 +100,6 @@ namespace Flowers
                     Log.LogEntry("Reset was executed");
                     return;
                 }
-                break;
 
                 case WebConstants.ActionClearLog:
                     var logCleared = Log.ClearLog();

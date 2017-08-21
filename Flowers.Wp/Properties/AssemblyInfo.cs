@@ -10,7 +10,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Laurent Bugnion (GalaSoft)")]
 [assembly: AssemblyProduct("Flowers.Wp")]
-[assembly: AssemblyCopyright("Copyright © Laurent Bugnion (GalaSoft) 2014-2015")]
+[assembly: AssemblyCopyright("Copyright © Laurent Bugnion (GalaSoft) 2014-2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
