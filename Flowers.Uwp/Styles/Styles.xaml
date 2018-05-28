@@ -50,7 +50,7 @@
     </Style>
 
     <DataTemplate x:Key="FlowerViewModelTemplate">
-        <Grid Height="110"
+        <Grid Height="80"
               Margin="0,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -62,8 +62,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Height="110"
-                   Width="110"
+            <Image Height="80"
+                   Width="80"
                    Source="{Binding ImageUri, Mode=OneWay}"
                    Grid.RowSpan="2"
                    Margin="0,0,12,0" />
@@ -71,8 +71,7 @@
             <TextBlock Text="{Binding Model.Name}"
                        Style="{StaticResource TitleTextBlockStyle}"
                        FontSize="24"
-                       Grid.Column="1"
-                       d:LayoutOverrides="Height, TopPosition, BottomPosition" />
+                       Grid.Column="1" />
 
             <TextBlock Text="{Binding Model.Description}"
                        Style="{StaticResource CaptionTextBlockStyle}"
