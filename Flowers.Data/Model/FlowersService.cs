@@ -10,7 +10,7 @@ namespace Flowers.Model
     public class FlowersService : IFlowersService
     {
         private const string RequestUrl =
-            "http://www.galasoft.ch/labs/Flowers/FlowersService.ashx?{0}={1}&{2}={3}&ticks={4}";
+            "http://lbflowers.azurewebsites.net/FlowersService.ashx?{0}={1}&{2}={3}&ticks={4}";
 
         public async Task<IList<Flower>> Refresh()
         {

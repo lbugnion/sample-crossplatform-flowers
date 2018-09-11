@@ -80,6 +80,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Design\flowericon.png" />
+    <Content Include="images\BeeOrchid.jpg" />
+    <Content Include="images\BermudaButtercup.jpg" />
+    <Content Include="images\BindWeed.jpg" />
+    <Content Include="images\BlueGem.jpg" />
+    <Content Include="images\CallaLily.jpg" />
+    <Content Include="images\CommonMallow.jpg" />
+    <Content Include="images\CratevaReligiosa.jpg" />
+    <Content Include="images\Lantana.jpg" />
+    <Content Include="images\Oleander.jpg" />
+    <Content Include="images\OrangeCosmos.jpg" />
+    <Content Include="images\Poppy.jpg" />
+    <Content Include="images\PrimulaFarinosa.jpg" />
+    <Content Include="images\ScarletPimpernel.jpg" />
+    <Content Include="images\SpanishOyster.jpg" />
+    <Content Include="images\StBernardLily.jpg" />
+    <Content Include="images\StorksBill.jpg" />
+    <Content Include="images\Verbascum.jpg" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
